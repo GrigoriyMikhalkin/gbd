@@ -1,0 +1,7 @@
+#ignore
+*.php~
+*.css~
+*.php\#
+\#.php\#
+*.css\#
+\#.css\#

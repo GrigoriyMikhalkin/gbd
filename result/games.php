@@ -1,13 +1,4 @@
-<html>
-<head>
-	<link rel="stylesheet" href="http://localhost/greesha/getbestdeal/stylesheets/result.css" />
-</head>
-
-<body>
-
 <?php
-include("../header.php");
-
 include("parse.php");
 
 $gameName = $_POST["gameName"];
@@ -27,6 +18,3 @@ foreach($match_title[1] as $title) {
 			++$i;			
 }
 ?>
-
-</body>
-</html>

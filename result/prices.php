@@ -1,10 +1,3 @@
-<html>
-<head>
-		<link rel="stylesheet" href="http://localhost/greesha/getbestdeal/stylesheets/result.css" />
-</head>
-
-<body>
-
 <?php
 
 function printCost($cost, $store, $url){
@@ -15,10 +8,9 @@ function printCost($cost, $store, $url){
    echo "</a>";
 }
 
-include("../header.php");
-$gameName = $_GET["name"];
-$gameid = $_GET["id"];
-   
+$gameName = $_POST["name"];
+$gameid = $_POST["id"];
+
 require("parseGOG.php");
 $arr[0] = parseGOG($gameName);
 
@@ -31,6 +23,3 @@ foreach ($arr as $price) {
       if (count($price) == 3) printCost($price[0], $price[2], $price[1]);}
 
 ?>
-
-</body>
-</html>

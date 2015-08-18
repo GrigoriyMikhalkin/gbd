@@ -3,13 +3,13 @@
 include_once("parse.php");
 
 function prepareNameGOG($name){
-	$gameName = str_replace(' ','_',preg_replace("/[^a-z0-9\s]/","",strtolower($_GET["name"])));
+	$gameName = str_replace(' ','_',preg_replace("/[^a-z0-9\s]/","",strtolower($name)));
 	return($gameName);
 }
 
 function parseGOG($name)
 {
-	$gameName = prepareNameGOG($name);	
+	$gameName = prepareNameGOG($name);
 	$url = "http://www.gog.com/game/" . $gameName;
 	$html = getHTML($url);
 
